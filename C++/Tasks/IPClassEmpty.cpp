@@ -1,5 +1,4 @@
 //find class of an IP Address through C programming
-
 #include <stdio.h>
 #include <string.h>
 

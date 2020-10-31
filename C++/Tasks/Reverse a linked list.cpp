@@ -46,7 +46,8 @@ struct LinkedList {
     { 
         struct Node* temp = head; 
         while (temp != NULL) { 
-           //complete the while loop
+            cout<<temp->data<<" ";
+           temp=temp->next;
         } 
     } 
   

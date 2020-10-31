@@ -1,29 +1,28 @@
 #include<iostream>
 using namespace std;
+class gfg
+{
 
-//Write a program to find x to the power n (i.e. x^n). 
-//Take x and n from the user. You need to return the answer.
-//Do this recursively.
-
-int power(int x, int n) {
-  /* Don't write main().
-     Don't read input, it is passed as function argument.
-     Return output and don't print it.
-     Taking input and printing output is handled automatically.
-  */
-if (n != 0)
-        return (x*power(x, n-1));
-else
+/* Function to calculate x raised to the power y */
+public:
+int power(int x, unsigned int y)
+{
+    if (y == 0)
         return 1;
+    else if (y % 2 == 0)
+        return power(x, y / 2) * power(x, y / 2);
+    else
+        return x * power(x, y / 2) * power(x, y / 2);
+} 
+};
 
+/* Driver code */
+int main()
+{
+    gfg g;
+    int x = 2;
+    unsigned int y = 3;
 
+    cout << g.power(x, y);
+    return 0;
 }
-
-int main(){
-    int x, n;
-    cin >> x >> n;
-  
-    cout << power(x, n) << endl;
-}
-
-

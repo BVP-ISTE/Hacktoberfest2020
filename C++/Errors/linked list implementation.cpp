@@ -14,8 +14,8 @@ public:
     Node*next;
     
     Node(int data){
-        this->data=data;
-        next=INT_MAX;
+        this.data=data;
+        this.next=NULL;
     }
 };
 
@@ -31,4 +31,5 @@ int main(){
     n2.next=n3;
     Node*n4=new Node(4);
     n3->next=n4;
+    return 0;
 }

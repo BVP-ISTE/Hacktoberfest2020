@@ -11,6 +11,8 @@ def maxFreq(l):
     for w in l:
         if w in d:
             d[w] += 1
+        else:
+            d[w]=1
 
     final = max(d)
     for w in l:
